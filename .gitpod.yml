@@ -1,5 +1,5 @@
-# Gitpod configuration file for Ejabberd
-image: ejabberd/ecs:latest
+# Gitpod configuration file for Ejabberd using the latest Erlang/OTP image
+image: erlang:latest
 
 tasks:
   - init: |
