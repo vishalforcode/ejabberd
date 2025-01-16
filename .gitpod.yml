@@ -1,5 +1,5 @@
 # Gitpod configuration file for Ejabberd
-image: erlang:24
+image: ejabberd/ecs:latest
 
 tasks:
   - init: |
