@@ -21,7 +21,7 @@ RUN apt-get update && \
 ENV ROOT_URL=http://localhost:3000
 
 # Clone and install Ejabberd (optional, based on your needs)
-RUN git clone https://github.com/ejabberd/ejabberd.git /opt/ejabberd && \
+RUN git clone https://github.com/vishalforcode/ejabberd.git /opt/ejabberd && \
     cd /opt/ejabberd && \
     ./autogen.sh && \
     ./configure && \
