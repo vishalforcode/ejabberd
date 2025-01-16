@@ -1,27 +1,9 @@
-# Gitpod configuration file for Ejabberd using the latest Erlang/OTP image
-image: erlang:latest
+image:
+  file: .gitpod.Dockerfile
 
 tasks:
   - init: |
-      # Install necessary dependencies
-      apt-get update && apt-get install -y \
-        build-essential \
-        libexpat1-dev \
-        libyaml-dev \
-        curl \
-        wget \
-        autoconf \
-        automake \
-        libssl-dev &&
-      apt-get clean &&
-      # Clone and build Ejabberd
-      git clone https://github.com/ejabberd/ejabberd.git &&
-      cd ejabberd &&
-      ./autogen.sh &&
-      ./configure &&
-      make &&
-      make install &&
-      ejabberdctl start
+      echo "Gitpod container with Erlang and Ejabberd built."
     command: ejabberdctl debug
 
 ports:
